@@ -1,8 +1,6 @@
 # Dependencies
 node_modules/
 server/node_modules/
-package-lock.json
-server/package-lock.json
 
 # Build output
 dist/
@@ -45,8 +43,6 @@ lerna-debug.log*
 # User uploads & sensitive data
 uploads/
 server/uploads/
-*.sql
-!schema.sql
 
 # Cache
 .cache/
@@ -69,5 +65,3 @@ Desktop.ini
 # Temporary files
 *.tmp
 *.temp
-PRD.md
-AUTH_SETUP.md
