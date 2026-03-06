@@ -24,6 +24,9 @@ COPY --from=builder /app/dist ./dist
 # Install serve to run the app
 RUN npm install -g serve
 
-EXPOSE 80
+# Use PORT from environment variable (Railway provides this)
+ENV PORT=8080
+EXPOSE 8080
 
-CMD ["serve", "-s", "dist", "-l", "80"]
+# Use shell format to expand $PORT
+CMD serve -s dist -l $PORT
